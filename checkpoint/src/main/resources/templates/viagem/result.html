@@ -1,0 +1,21 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Resultado da Viagem</title>
+</head>
+<body>
+<div class="container d-flex justify-content-center pt-5">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Horas e minutos da viagem</h5>
+            <h6 class="card-subtitle mb-2 text-muted"><a th:text="${tempo.getHoras()}"></a>:<a th:text="${tempo.getMinuto()}"></a>h</h6>
+            <p class="card-text">Após o calculo podemos concluir que sua viagem durará em torno de <a th:text="${tempo.getHoras()}"></a> horas e <a th:text="${tempo.getMinuto()}"></a> minutos</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
